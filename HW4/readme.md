@@ -46,7 +46,7 @@ git commit -m "docs: 完成分支、合併、fork與PR教學說明"
 git push -u origin developGitBranch
 4. 發起拉取請求（Pull Request）
 GitHub 網頁操作：
-瀏覽器開啟個人專案頁面：https://github.com/Micha1lyu/git-examples。
+瀏覽器開啟個人專案頁面：https://github.com/Micha1lyu/git-examples
 
 點擊頂端黃色提示條的 【Compare & pull request】。
 
