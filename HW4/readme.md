@@ -11,7 +11,7 @@
 一、操作流程與下達指令
 1. 專案副本建立（Fork）與本機複製（Clone）
 GitHub 網頁操作：
-進入母專案網址 https://github.com/se-test-examples/git-examples。
+進入母專案網址 `https://github.com/se-test-examples/git-examples。`
 
 點擊右上角 Fork 按鈕，將專案複製到個人帳號 Micha1lyu 底下。
 
