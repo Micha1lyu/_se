@@ -19,7 +19,7 @@ GitHub 網頁操作：
 Bash
 # 1. 複製個人 Fork 的子專案至本機 test 資料夾
 cd C:\Users\user\Desktop\現代軟體工程\test
-git clone git@github.com:Micha1lyu/git-examples.git
+git clone `git@github.com:Micha1lyu/git-examples.git`
 
 # 2. 進入子專案版本庫目錄
 cd git-examples
