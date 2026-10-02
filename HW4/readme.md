@@ -2,9 +2,9 @@
 
 本文件詳細記錄在完成「Fork、分支（Branch）、Pull Request（PR）、合併（Merge）」過程中所執行的所有終端機指令與 GitHub 平台操作流程。
 專案環境與路徑配置
-母專案來源：git@github.com:se-tset-examples/git-examples.git
+母專案來源：`git@github.com:se-tset-examples/git-examples.git`
 
-個人子專案（Fork）：git@github.com:Micha1lyu/git-examples.git
+個人子專案（Fork）：`git@github.com:Micha1lyu/git-examples.git`
 
 本機工作目錄：現代軟體工程\test\git-examples
 
