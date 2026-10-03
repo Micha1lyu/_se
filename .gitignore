@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local-only folders (embedded git repos, not for upload)
+mother/
+test/
