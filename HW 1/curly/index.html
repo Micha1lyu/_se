@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>curly — A curl-like HTTP Client</title>
-  <meta name="description" content="curly is a lightweight, powerful curl-like HTTP client built in pure Python. No dependencies, beautiful terminal output, full HTTP support." />
+  <title>curly — 命令列 HTTP 客戶端工具</title>
+  <meta name="description" content="curly 是一款輕量、強大的 curl-like HTTP 客戶端，以純 Python 打造。無需安裝任何套件，終端機輸出美觀，完整支援 HTTP 功能。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- ===== 導覽列 ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
@@ -20,9 +20,9 @@
         <span>curly</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#usage">Usage</a></li>
-        <li><a href="#install">Install</a></li>
+        <li><a href="#features">功能特色</a></li>
+        <li><a href="#usage">使用方式</a></li>
+        <li><a href="#install">快速安裝</a></li>
         <li>
           <a href="https://github.com/Micha1lyu/curly" target="_blank" class="btn btn-outline" id="nav-github-btn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -33,7 +33,7 @@
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== 主視覺 ===== -->
   <section class="hero" id="hero">
     <div class="hero-bg">
       <div class="hero-orb hero-orb-1"></div>
@@ -44,22 +44,22 @@
     <div class="hero-content">
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        Open Source · Pure Python · Zero Dependencies
+        開源專案 · 純 Python · 零外部依賴
       </div>
       <h1 class="hero-title">
-        <span class="title-curl">curl</span><span class="title-y">,</span>
-        <br/>but <span class="title-highlight">curly</span>
+        <span class="title-curl">curl</span><span class="title-y">，</span>
+        <br/>但更 <span class="title-highlight">捲</span>
       </h1>
       <p class="hero-desc">
-        A powerful, lightweight HTTP client for the command line.<br/>
-        Built in pure Python — no pip install required.
+        強大、輕量的命令列 HTTP 客戶端工具。<br/>
+        純 Python 打造 — 不需要 pip install，開箱即用。
       </p>
       <div class="hero-terminal" id="hero-terminal">
         <div class="terminal-bar">
           <span class="t-dot t-red"></span>
           <span class="t-dot t-yellow"></span>
           <span class="t-dot t-green"></span>
-          <span class="t-title">curly — terminal</span>
+          <span class="t-title">curly — 終端機</span>
         </div>
         <div class="terminal-body">
           <div class="t-line">
@@ -85,132 +85,132 @@
       <div class="hero-actions">
         <a href="https://github.com/Micha1lyu/curly" target="_blank" class="btn btn-primary" id="hero-github-btn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          View on GitHub
+          在 GitHub 上查看
         </a>
-        <a href="#usage" class="btn btn-ghost" id="see-usage-btn">See Usage ↓</a>
+        <a href="#usage" class="btn btn-ghost" id="see-usage-btn">查看使用方式 ↓</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== FEATURES ===== -->
+  <!-- ===== 功能特色 ===== -->
   <section class="section" id="features">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Features</span>
-        <h2 class="section-title">Everything curl does,<br/><span class="grad-text">in pure Python</span></h2>
+        <span class="section-tag">功能特色</span>
+        <h2 class="section-title">curl 能做的，<br/><span class="grad-text">純 Python 也辦得到</span></h2>
       </div>
       <div class="features-grid">
         <div class="feature-card" id="feat-methods">
           <div class="feat-icon">⚡</div>
-          <h3>All HTTP Methods</h3>
-          <p>GET, POST, PUT, DELETE, PATCH and more. Auto-detects POST when body is provided.</p>
+          <h3>完整 HTTP 方法支援</h3>
+          <p>支援 GET、POST、PUT、DELETE、PATCH 等。提供請求主體時自動切換為 POST。</p>
         </div>
         <div class="feature-card" id="feat-headers">
           <div class="feat-icon">📋</div>
-          <h3>Custom Headers</h3>
-          <p>Add any number of request headers with <code>-H</code>. Repeatable for multiple headers.</p>
+          <h3>自訂請求標頭</h3>
+          <p>使用 <code>-H</code> 新增任意數量的請求標頭，可重複使用設定多個。</p>
         </div>
         <div class="feature-card" id="feat-body">
           <div class="feat-icon">📦</div>
-          <h3>Request Body</h3>
-          <p>Send JSON or raw data with <code>-d</code>. Auto-sets <code>Content-Type: application/json</code> for JSON.</p>
+          <h3>請求主體傳送</h3>
+          <p>使用 <code>-d</code> 傳送 JSON 或純文字資料，自動偵測並設定 <code>Content-Type: application/json</code>。</p>
         </div>
         <div class="feature-card" id="feat-auth">
           <div class="feat-icon">🔐</div>
-          <h3>Basic Auth</h3>
-          <p>Authenticate with <code>-u user:pass</code>. Automatically encodes as Base64 Authorization header.</p>
+          <h3>Basic 身分驗證</h3>
+          <p>使用 <code>-u user:pass</code> 進行驗證，自動編碼為 Base64 Authorization 標頭。</p>
         </div>
         <div class="feature-card" id="feat-redirect">
           <div class="feat-icon">↪️</div>
-          <h3>Follow Redirects</h3>
-          <p>Automatically follow 3xx redirects with <code>-L</code>. Configurable max redirect limit.</p>
+          <h3>自動跟隨重新導向</h3>
+          <p>使用 <code>-L</code> 自動跟隨 3xx 重新導向，可設定最大跟隨次數。</p>
         </div>
         <div class="feature-card" id="feat-pretty">
           <div class="feat-icon">✨</div>
-          <h3>Pretty JSON</h3>
-          <p>Response JSON is automatically formatted and indented. Disable with <code>--no-pretty</code>.</p>
+          <h3>JSON 自動排版</h3>
+          <p>回應的 JSON 自動格式化縮排，可使用 <code>--no-pretty</code> 關閉此功能。</p>
         </div>
         <div class="feature-card" id="feat-verbose">
           <div class="feat-icon">🔍</div>
-          <h3>Verbose Mode</h3>
-          <p>See full request and response details with <code>-v</code>. Includes headers, timing, and ASCII banner.</p>
+          <h3>詳細模式</h3>
+          <p>使用 <code>-v</code> 查看完整的請求與回應資訊，包含標頭、執行時間與 ASCII 標題圖。</p>
         </div>
         <div class="feature-card" id="feat-save">
           <div class="feat-icon">💾</div>
-          <h3>Save to File</h3>
-          <p>Write response body to a file with <code>-o filename</code>. Perfect for API responses and downloads.</p>
+          <h3>儲存回應至檔案</h3>
+          <p>使用 <code>-o 檔名</code> 將回應主體寫入檔案，非常適合儲存 API 回應結果。</p>
         </div>
         <div class="feature-card" id="feat-nodep">
           <div class="feat-icon">🦾</div>
-          <h3>Zero Dependencies</h3>
-          <p>Uses Python standard library only. No pip install, no venv, no hassle. Just Python 3.8+.</p>
+          <h3>零外部依賴</h3>
+          <p>僅使用 Python 標準函式庫，不需要 pip install、不需要虛擬環境，Python 3.8+ 即可直接執行。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FLAGS TABLE ===== -->
+  <!-- ===== 參數對照表 ===== -->
   <section class="section section-dark" id="flags">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Reference</span>
-        <h2 class="section-title">All <span class="grad-text">Flags</span></h2>
+        <span class="section-tag">參數參考</span>
+        <h2 class="section-title">所有<span class="grad-text">可用參數</span></h2>
       </div>
       <div class="table-wrapper">
         <table class="flags-table" id="flags-table">
           <thead>
             <tr>
-              <th>Flag</th>
-              <th>Long Form</th>
-              <th>Description</th>
-              <th>Default</th>
+              <th>縮寫</th>
+              <th>完整參數</th>
+              <th>說明</th>
+              <th>預設值</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td><code>-X</code></td><td><code>--method</code></td><td>HTTP method</td><td>GET</td></tr>
-            <tr><td><code>-H</code></td><td><code>--header</code></td><td>Custom header (repeatable)</td><td>—</td></tr>
-            <tr><td><code>-d</code></td><td><code>--data</code></td><td>Request body</td><td>—</td></tr>
-            <tr><td><code>-F</code></td><td><code>--form</code></td><td>Form field (repeatable)</td><td>—</td></tr>
-            <tr><td><code>-u</code></td><td><code>--user</code></td><td>Basic auth <code>user:pass</code></td><td>—</td></tr>
-            <tr><td><code>-L</code></td><td><code>--location</code></td><td>Follow redirects</td><td>off</td></tr>
-            <tr><td>—</td><td><code>--max-redirs</code></td><td>Max redirect count</td><td>10</td></tr>
-            <tr><td><code>-o</code></td><td><code>--output</code></td><td>Save body to file</td><td>—</td></tr>
-            <tr><td><code>-i</code></td><td><code>--include</code></td><td>Show response headers</td><td>off</td></tr>
-            <tr><td><code>-v</code></td><td><code>--verbose</code></td><td>Verbose output</td><td>off</td></tr>
-            <tr><td>—</td><td><code>--no-pretty</code></td><td>Disable JSON formatting</td><td>off</td></tr>
-            <tr><td>—</td><td><code>--timeout</code></td><td>Timeout in seconds</td><td>30</td></tr>
+            <tr><td><code>-X</code></td><td><code>--method</code></td><td>HTTP 方法</td><td>GET</td></tr>
+            <tr><td><code>-H</code></td><td><code>--header</code></td><td>自訂標頭（可重複）</td><td>—</td></tr>
+            <tr><td><code>-d</code></td><td><code>--data</code></td><td>請求主體</td><td>—</td></tr>
+            <tr><td><code>-F</code></td><td><code>--form</code></td><td>表單欄位（可重複）</td><td>—</td></tr>
+            <tr><td><code>-u</code></td><td><code>--user</code></td><td>Basic 驗證 <code>帳號:密碼</code></td><td>—</td></tr>
+            <tr><td><code>-L</code></td><td><code>--location</code></td><td>跟隨重新導向</td><td>關閉</td></tr>
+            <tr><td>—</td><td><code>--max-redirs</code></td><td>最大重新導向次數</td><td>10</td></tr>
+            <tr><td><code>-o</code></td><td><code>--output</code></td><td>儲存主體至檔案</td><td>—</td></tr>
+            <tr><td><code>-i</code></td><td><code>--include</code></td><td>顯示回應標頭</td><td>關閉</td></tr>
+            <tr><td><code>-v</code></td><td><code>--verbose</code></td><td>詳細輸出模式</td><td>關閉</td></tr>
+            <tr><td>—</td><td><code>--no-pretty</code></td><td>關閉 JSON 格式化</td><td>關閉</td></tr>
+            <tr><td>—</td><td><code>--timeout</code></td><td>逾時秒數</td><td>30</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
 
-  <!-- ===== USAGE EXAMPLES ===== -->
+  <!-- ===== 使用範例 ===== -->
   <section class="section" id="usage">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Examples</span>
-        <h2 class="section-title">Common <span class="grad-text">Use Cases</span></h2>
+        <span class="section-tag">使用範例</span>
+        <h2 class="section-title">常見<span class="grad-text">應用情境</span></h2>
       </div>
       <div class="examples-grid">
 
         <div class="example-card" id="ex-get">
-          <div class="ex-label">Simple GET</div>
+          <div class="ex-label">簡單 GET 請求</div>
           <div class="code-block">
             <div class="code-bar">
               <span>bash</span>
-              <button class="copy-btn" data-target="ex1" id="copy-ex1">Copy</button>
+              <button class="copy-btn" data-target="ex1" id="copy-ex1">複製</button>
             </div>
             <pre id="ex1"><code>python curly.py https://httpbin.org/get</code></pre>
           </div>
         </div>
 
         <div class="example-card" id="ex-post">
-          <div class="ex-label">POST with JSON body</div>
+          <div class="ex-label">POST 傳送 JSON 主體</div>
           <div class="code-block">
             <div class="code-bar">
               <span>bash</span>
-              <button class="copy-btn" data-target="ex2" id="copy-ex2">Copy</button>
+              <button class="copy-btn" data-target="ex2" id="copy-ex2">複製</button>
             </div>
             <pre id="ex2"><code>python curly.py -X POST \
   -d '{"name":"curly","version":"1.0"}' \
@@ -219,11 +219,11 @@
         </div>
 
         <div class="example-card" id="ex-headers">
-          <div class="ex-label">Custom headers</div>
+          <div class="ex-label">自訂請求標頭</div>
           <div class="code-block">
             <div class="code-bar">
               <span>bash</span>
-              <button class="copy-btn" data-target="ex3" id="copy-ex3">Copy</button>
+              <button class="copy-btn" data-target="ex3" id="copy-ex3">複製</button>
             </div>
             <pre id="ex3"><code>python curly.py \
   -H "Accept: application/json" \
@@ -233,11 +233,11 @@
         </div>
 
         <div class="example-card" id="ex-auth">
-          <div class="ex-label">Basic authentication</div>
+          <div class="ex-label">Basic 身分驗證</div>
           <div class="code-block">
             <div class="code-bar">
               <span>bash</span>
-              <button class="copy-btn" data-target="ex4" id="copy-ex4">Copy</button>
+              <button class="copy-btn" data-target="ex4" id="copy-ex4">複製</button>
             </div>
             <pre id="ex4"><code>python curly.py -u admin:password \
   https://httpbin.org/basic-auth/admin/password</code></pre>
@@ -245,11 +245,11 @@
         </div>
 
         <div class="example-card" id="ex-verbose">
-          <div class="ex-label">Verbose + follow redirects</div>
+          <div class="ex-label">詳細模式 + 跟隨重新導向</div>
           <div class="code-block">
             <div class="code-bar">
               <span>bash</span>
-              <button class="copy-btn" data-target="ex5" id="copy-ex5">Copy</button>
+              <button class="copy-btn" data-target="ex5" id="copy-ex5">複製</button>
             </div>
             <pre id="ex5"><code>python curly.py -L -v \
   https://httpbin.org/redirect/3</code></pre>
@@ -257,11 +257,11 @@
         </div>
 
         <div class="example-card" id="ex-save">
-          <div class="ex-label">Save to file</div>
+          <div class="ex-label">儲存回應至檔案</div>
           <div class="code-block">
             <div class="code-bar">
               <span>bash</span>
-              <button class="copy-btn" data-target="ex6" id="copy-ex6">Copy</button>
+              <button class="copy-btn" data-target="ex6" id="copy-ex6">複製</button>
             </div>
             <pre id="ex6"><code>python curly.py -o result.json \
   https://httpbin.org/json</code></pre>
@@ -272,20 +272,20 @@
     </div>
   </section>
 
-  <!-- ===== INSTALL ===== -->
+  <!-- ===== 快速安裝 ===== -->
   <section class="section section-dark" id="install">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Get Started</span>
-        <h2 class="section-title">Install in <span class="grad-text">seconds</span></h2>
+        <span class="section-tag">快速開始</span>
+        <h2 class="section-title">幾秒內<span class="grad-text">立即上手</span></h2>
       </div>
       <div class="install-steps">
         <div class="step" id="step-1">
           <div class="step-num">01</div>
           <div class="step-content">
-            <h3>Clone the repo</h3>
+            <h3>複製專案</h3>
             <div class="code-block">
-              <div class="code-bar"><span>bash</span><button class="copy-btn" data-target="inst1" id="copy-inst1">Copy</button></div>
+              <div class="code-bar"><span>bash</span><button class="copy-btn" data-target="inst1" id="copy-inst1">複製</button></div>
               <pre id="inst1"><code>git clone https://github.com/Micha1lyu/curly.git
 cd curly</code></pre>
             </div>
@@ -294,9 +294,9 @@ cd curly</code></pre>
         <div class="step" id="step-2">
           <div class="step-num">02</div>
           <div class="step-content">
-            <h3>Run immediately</h3>
+            <h3>立即執行</h3>
             <div class="code-block">
-              <div class="code-bar"><span>bash</span><button class="copy-btn" data-target="inst2" id="copy-inst2">Copy</button></div>
+              <div class="code-bar"><span>bash</span><button class="copy-btn" data-target="inst2" id="copy-inst2">複製</button></div>
               <pre id="inst2"><code>python curly.py https://httpbin.org/get</code></pre>
             </div>
           </div>
@@ -304,12 +304,12 @@ cd curly</code></pre>
         <div class="step" id="step-3">
           <div class="step-num">03</div>
           <div class="step-content">
-            <h3>Optional: Make it a global command</h3>
+            <h3>設定為全域指令（選用）</h3>
             <div class="code-block">
-              <div class="code-bar"><span>bash (Linux/macOS)</span><button class="copy-btn" data-target="inst3" id="copy-inst3">Copy</button></div>
+              <div class="code-bar"><span>bash（Linux / macOS）</span><button class="copy-btn" data-target="inst3" id="copy-inst3">複製</button></div>
               <pre id="inst3"><code>chmod +x curly.py
 sudo ln -s $(pwd)/curly.py /usr/local/bin/curly
-# Now just use: curly https://example.com</code></pre>
+# 之後直接使用：curly https://example.com</code></pre>
             </div>
           </div>
         </div>
@@ -317,20 +317,20 @@ sudo ln -s $(pwd)/curly.py /usr/local/bin/curly
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== 頁尾 ===== -->
   <footer class="footer" id="footer">
     <div class="container footer-inner">
       <div class="footer-logo">
         <span class="logo-icon">🌀</span>
         <span>curly</span>
       </div>
-      <p class="footer-desc">A curl-like HTTP client in pure Python.</p>
+      <p class="footer-desc">用純 Python 打造的 curl-like HTTP 客戶端。</p>
       <div class="footer-links">
-        <a href="https://github.com/Micha1lyu/curly" target="_blank" id="footer-source-link">Source Code</a>
+        <a href="https://github.com/Micha1lyu/curly" target="_blank" id="footer-source-link">原始碼</a>
         <a href="https://github.com/Micha1lyu" target="_blank" id="footer-profile-link">@Micha1lyu</a>
-        <a href="https://github.com/Micha1lyu/curly/issues" target="_blank" id="footer-issues-link">Issues</a>
+        <a href="https://github.com/Micha1lyu/curly/issues" target="_blank" id="footer-issues-link">回報問題</a>
       </div>
-      <p class="footer-copy">MIT License &copy; 2024 <a href="https://github.com/Micha1lyu" target="_blank">Micha1lyu</a></p>
+      <p class="footer-copy">MIT 授權 &copy; 2024 <a href="https://github.com/Micha1lyu" target="_blank">Micha1lyu</a></p>
     </div>
   </footer>
 
