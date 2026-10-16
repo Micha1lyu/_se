@@ -1,0 +1,13 @@
+# Node.js
+services/node-api/node_modules/
+
+# Python
+services/python-api/__pycache__/
+services/python-api/*.pyc
+
+# Docker
+.env
+
+# OS
+.DS_Store
+Thumbs.db
