@@ -1,8 +1,5 @@
 # 給 Antigravity Agent 的一鍵建置與驗證 Prompt
 
-請直接複製以下區塊的內容，貼給 Antigravity 裡面的 Agent 執行。這份 Prompt 已經把所有檔案結構、設定檔與前後端程式碼規格寫清楚，並要求 Agent 自動幫你在本機建置、啟動 Docker 容器與驗證測試。
-
-## 複製以下文字貼給 Antigravity Agent
 
 ```markdown
 請幫我在目前的工作目錄下建置一個完整的 Docker 微服務展示系統，完成檔案建立、容器建置啟動與 API 驗證。
