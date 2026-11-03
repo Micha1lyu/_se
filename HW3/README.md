@@ -2,6 +2,8 @@
 
 CrateMate Studio 是一個黑膠收藏與 DJ 排歌工作台。你可以記錄唱片的版本、品相、購入價與清潔紀錄，也可以把歌曲載入兩台虛擬唱盤，估算接歌所需的轉速調整和調性相容性。
 
+[開啟 CrateMate Studio 互動版](https://micha1lyu.github.io/_se/HW3/demo/)
+
 ## 快速啟動
 
 建議使用 Node.js 24 LTS。下載或複製儲存庫後，從儲存庫根目錄執行：
