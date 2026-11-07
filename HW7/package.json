@@ -1,0 +1,15 @@
+{
+  "name": "hw7-taskboard", "version": "1.0.0", "private": true, "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "npm run test:unit && npm run test:system && npm run test:e2e",
+    "test:unit": "node --test tests/unit/*.test.js",
+    "test:system": "node --test tests/system/*.test.js",
+    "test:e2e": "playwright test",
+    "test:install": "node scripts/install-browser.js",
+    "test:report": "playwright show-report",
+    "docs:screenshots": "node scripts/capture-screenshots.js"
+  },
+  "devDependencies": { "@playwright/test": "^1.56.1" }
+}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>日日清單 · Taskboard</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+  <header><a class="brand" href="/">◈ 日日清單</a><span>HW7 / 現代軟體工程</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">MAKE ROOM FOR WHAT MATTERS</p><h1>把今天，<br>整理成喜歡的樣子。</h1><p class="subtitle">一件一件完成，讓每一步都有方向。</p><div class="date">YOUR DAILY WORKSPACE <span>↘</span></div></section>
+    <section class="workspace" aria-label="任務工作區">
+      <div class="board-title"><div><p class="eyebrow">MY TASKS</p><h2>今日待辦</h2></div><span class="badge">● 專注當下</span></div>
+      <form id="task-form"><label for="title">新增任務</label><div class="input-row"><input id="title" name="title" maxlength="100" required placeholder="接下來，想完成什麼？" autocomplete="off"><button class="primary" type="submit">＋ 新增</button></div></form>
+      <p id="message" role="status" aria-live="polite"></p>
+      <div class="toolbar"><div role="group" aria-label="任務篩選"><button data-filter="all" aria-pressed="true">全部</button><button data-filter="active" aria-pressed="false">未完成</button><button data-filter="completed" aria-pressed="false">已完成</button></div><span id="count">0 件待完成</span></div>
+      <ul id="tasks" aria-label="任務清單"></ul>
+      <div id="empty"><span>✦</span><h3>留一點空間，給新的開始。</h3><p>新增第一件任務，開始今天的節奏。</p></div>
+      <div class="progress"><span id="progress-label">今日進度 0%</span><div><i id="progress-bar"></i></div></div>
+    </section>
+  </main>
+  <footer><span>SMALL STEPS. CLEAR MIND.</span><span>Node.js API · 三層自動化測試</span></footer>
+</body></html>
