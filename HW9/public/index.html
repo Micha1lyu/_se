@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#164d43">
+  <meta name="description" content="Studyflow 學習任務管理：整理課業、安排期限，讓每一天的努力看得見。">
+  <title>Studyflow｜學習任務管理</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23164d43'/%3E%3Cpath d='m17 33 10 10 21-23' fill='none' stroke='%23d4edaa' stroke-width='7'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css"><script type="module" src="app.js"></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="Studyflow 首頁"><span class="brand-icon">✓</span>studyflow<span class="brand-dot">.</span></a>
+  <div class="workspace"><span class="avatar">學</span><div>我的學習空間<small>一步一步，慢慢前進</small></div></div>
+  <p class="nav-label">WORKSPACE</p>
+  <nav aria-label="任務檢視">
+    <button data-view="all" class="nav-item active"><span>▦</span>所有任務 <b id="nav-total">0</b></button>
+    <button data-view="today" class="nav-item"><span>◷</span>今日到期</button>
+    <button data-view="completed" class="nav-item"><span>☑</span>已完成</button>
+  </nav>
+  <div class="sidebar-note"><span class="sprout">✳</span><strong>進步，從一件小事開始。</strong><p>把大目標拆成小任務，<br>為今天的自己留一點餘裕。</p></div>
+  <div class="sidebar-bottom"><span class="online-dot"></span>資料儲存於此瀏覽器<small>HW9 · Cloudflare Workers</small></div>
+</aside>
+<main>
+  <header class="topbar"><span>我的工作台 <span class="slash">/</span> <strong id="breadcrumb">所有任務</strong></span><time id="today-date"></time></header>
+  <div class="content">
+    <section class="page-heading"><div><p class="eyebrow">MAKE ROOM FOR PROGRESS</p><h1 id="page-title">把學習，整理成日常。</h1><p class="subtitle">清楚安排每一步，專注完成眼前的一件事。</p></div><button id="new-task" class="primary"><span>＋</span> 新增任務</button></section>
+    <section class="overview" aria-label="學習進度">
+      <div class="progress-card"><div><p class="card-label">你的學習進度 <span>↗</span></p><h2><span id="progress-number">0</span><small>%</small></h2><p id="progress-caption">準備好開始第一個任務了嗎？</p></div><div class="progress-ring" id="progress-ring"><span>持續前進<br><b>YOU GOT THIS</b></span></div></div>
+      <div class="stat-card"><span class="stat-icon">▤</span><span class="stat-label">待完成任務</span><strong id="active-count">0</strong><small>給每個目標一個開始</small></div>
+      <div class="stat-card"><span class="stat-icon peach">◷</span><span class="stat-label">已逾期任務</span><strong id="overdue-count">0</strong><small>重新安排，也是一種進步</small></div>
+    </section>
+    <section class="tasks-panel" aria-labelledby="list-heading">
+      <div class="panel-heading"><div><h2 id="list-heading">所有任務 <span id="visible-count">0</span></h2><p>讓重要的事情，都有自己的位置。</p></div><button id="load-demo" class="text-button">載入範例 ↗</button></div>
+      <div class="toolbar"><div class="tabs" role="group" aria-label="任務狀態篩選"><button data-filter="all" class="selected" aria-pressed="true">全部</button><button data-filter="active" aria-pressed="false">待完成</button><button data-filter="completed" aria-pressed="false">已完成</button></div><div class="search-sort"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜尋任務或科目" aria-label="搜尋任務或科目"></label><select id="sort" aria-label="任務排序"><option value="created">最新新增</option><option value="due">到期日優先</option><option value="priority">優先程度</option></select></div></div>
+      <div class="list-labels" aria-hidden="true"><span>任務名稱</span><span>到期日</span><span>優先程度</span><span></span></div>
+      <ul id="task-list" aria-label="任務清單"></ul>
+      <div id="empty-state" class="empty-state"><span>☷</span><h3>為下一個目標，留個位置。</h3><p>新增第一件學習任務，從小小的一步開始。</p><button id="empty-add" class="secondary">＋ 新增第一件任務</button></div>
+      <footer class="panel-footer"><span id="list-summary">共 0 件任務</span><span>每完成一件，離目標就更近一點。 ✳</span></footer>
+    </section>
+    <footer class="page-footer"><span>STUDY AT YOUR OWN PACE.</span><span>小步前進，也是在前進。</span></footer>
+  </div>
+</main>
+<dialog id="task-dialog" aria-labelledby="dialog-title">
+  <form id="task-form"><div class="dialog-heading"><div><p class="eyebrow">ONE STEP AT A TIME</p><h2 id="dialog-title">新增學習任務</h2></div><button type="button" id="close-dialog" class="icon-button" aria-label="關閉">×</button></div>
+    <label>任務名稱 <span class="required">*</span><input name="title" id="task-title" required maxlength="100" placeholder="例如：完成軟體工程第九次作業"></label>
+    <label>科目<input name="subject" maxlength="30" placeholder="例如：現代軟體工程"></label>
+    <div class="form-grid"><label>到期日<input name="due" type="date"></label><label>優先程度<select name="priority"><option value="medium">中優先</option><option value="high">高優先</option><option value="low">低優先</option></select></label></div>
+    <label>備註<textarea name="notes" maxlength="500" rows="3" placeholder="記下需要準備的資料或下一步…"></textarea></label>
+    <p id="form-error" role="alert"></p><div class="dialog-actions"><button type="button" id="cancel-dialog" class="secondary">取消</button><button type="submit" class="primary">儲存任務</button></div>
+  </form>
+</dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>

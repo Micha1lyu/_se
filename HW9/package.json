@@ -1,0 +1,15 @@
+{
+  "name": "hw9-studyflow",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "node --check public/app.js && node --check public/model.js",
+    "test": "node --test tests/model.test.js"
+  },
+  "devDependencies": { "wrangler": "^4.0.0" },
+  "engines": { "node": ">=22" }
+}
