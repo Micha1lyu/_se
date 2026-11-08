@@ -1,0 +1,9 @@
+{
+  "name": "kinmen-campus-portal",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "含學生與教師專區的繁體中文大學校務系統教學專案",
+  "engines": { "node": ">=22.13" },
+  "scripts": { "start": "node server.js", "test": "node --test tests/*.test.js", "build:pages": "node scripts/build-pages.mjs" }
+}
